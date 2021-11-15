@@ -1,5 +1,20 @@
  $(function() {
 
+     $('.belt').on('click', function() {
+         $('.catalog__choose-link').removeClass('catalog__choose-link--active');
+         $('.simply').addClass('catalog__choose-link--active');
+         $('.catalog__items').removeClass('catalog__items--active');
+         $('#tab-1').addClass('catalog__items--active');
+     });
+
+     $('.belt-ero').on('click', function() {
+         $('.catalog__choose-link').removeClass('catalog__choose-link--active');
+         $('.ero').addClass('catalog__choose-link--active');
+         $('.catalog__items').removeClass('catalog__items--active');
+         $('#tab-2').addClass('catalog__items--active');
+     });
+
+
 
 
      $('.catalog__choose-link').on('click', function(e) {
@@ -16,10 +31,8 @@
 
      $('.catalog__link').on('click', function() {
          $(".popup").css({ display: 'block' }).animate({ opacity: '1' }, 1400)
-             // var src = this.parent('div').find('img').attr('src');
+
      });
-
-
 
 
      $('.popup__close').on('click', function() {
